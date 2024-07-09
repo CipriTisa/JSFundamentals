@@ -1,3 +1,5 @@
+console.clear();
+
 // Step 1: Define Animals
 const lion = {
     name: "Lion",
@@ -22,23 +24,34 @@ const monkey = {
 
 // Step 2: Create Zoo Array
 const zoo = [lion, elephant, monkey];
+let index=0;
 
 // Step 3: Check initial food stock for all animals
-console.log(`${zoo[0].name} has ${zoo[0].foodStock} units of ${zoo[0].foodType}.`);
-console.log(`${zoo[1].name} has ${zoo[1].foodStock} units of ${zoo[1].foodType}.`);
-console.log(`${zoo[2].name} has ${zoo[2].foodStock} units of ${zoo[2].foodType}.`);
+console.log(`${zoo[index].name} has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
+index ++;
+console.log(`${zoo[index].name} has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
+index ++;
+console.log(`${zoo[index].name} has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
+console.log();
 
 // Step 4: Feed the animals and update stock
-zoo[0].foodStock -= zoo[0].dailyRequirement;
-console.log(`${zoo[0].name} has been fed. Remaining ${zoo[0].foodType} stock: ${zoo[0].foodStock}`);
+index=0;
+zoo[index].foodStock -= zoo[index].dailyRequirement;
+console.log(`After the ${zoo[index].name} has been fed with ${zoo[index].dailyRequirement} units, the remaining ${zoo[index].foodType} stock is ${zoo[index].foodStock}`);
+index ++;
 
-zoo[1].foodStock -= zoo[1].dailyRequirement;
-console.log(`${zoo[1].name} has been fed. Remaining ${zoo[1].foodType} stock: ${zoo[1].foodStock}`);
+zoo[index].foodStock -= zoo[index].dailyRequirement;
+console.log(`After the ${zoo[index].name} has been fed with ${zoo[index].dailyRequirement} units, the remaining ${zoo[index].foodType} stock is ${zoo[index].foodStock}`);
+index ++;
 
-zoo[2].foodStock -= zoo[2].dailyRequirement;
-console.log(`${zoo[2].name} has been fed. Remaining ${zoo[2].foodType} stock: ${zoo[2].foodStock}`);
+zoo[index].foodStock -= zoo[index].dailyRequirement;
+console.log(`After the ${zoo[index].name} has been fed with ${zoo[index].dailyRequirement} units, the remaining ${zoo[index].foodType} stock is ${zoo[index].foodStock}`);
+console.log();
 
 // Step 5: Check food stock after feeding
-console.log(`${zoo[0].name} now has ${zoo[0].foodStock} units of ${zoo[0].foodType}.`);
-console.log(`${zoo[1].name} now has ${zoo[1].foodStock} units of ${zoo[1].foodType}.`);
-console.log(`${zoo[2].name} now has ${zoo[2].foodStock} units of ${zoo[2].foodType}.`);
+index = index - index;
+console.log(`${zoo[index].name} now has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
+index ++;
+console.log(`${zoo[index].name} now has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
+index ++;
+console.log(`${zoo[index].name} now has ${zoo[index].foodStock} units of ${zoo[index].foodType}.`);
